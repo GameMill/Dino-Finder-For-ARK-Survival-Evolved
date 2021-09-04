@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+        <title>Hello, world!</title>
+      </head>
+<body>
+    
+    
+
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="ThisIsland-tab" data-toggle="tab" href="#ThisIsland" role="tab" aria-controls="ThisIsland" aria-selected="true">The Island</a>
+          <a class="nav-item nav-link" id="TheCenterMap-tab" data-toggle="tab" href="#TheCenterMap" role="tab" aria-controls="TheCenterMapMap" aria-selected="false">The Center</a>
+          <a class="nav-item nav-link" id="Scorched_EarthMap-tab" data-toggle="tab" href="#Scorched_EarthMap" role="tab" aria-controls="Scorched_EarthMapMap" aria-selected="false">Scorched Earth</a>
+
+          <a class="nav-item nav-link" id="RagnarokMap-tab" data-toggle="tab" href="#RagnarokMap" role="tab" aria-controls="RagnarokMap" aria-selected="false">Ragnarok</a>
+          <a class="nav-item nav-link" id="ExtinctionMap-tab" data-toggle="tab" href="#ExtinctionMap" role="tab" aria-controls="ExtinctionMap" aria-selected="false">Extinction</a>
+          <a class="nav-item nav-link" id="ValgueroMap-tab" data-toggle="tab" href="#ValgueroMap" role="tab" aria-controls="ValgueroMap" aria-selected="false">Valguero</a>
+
+          <a class="nav-item nav-link" id="GenesisMap-tab" data-toggle="tab" href="#GenesisMap" role="tab" aria-controls="GenesisMap" aria-selected="false">Genesis (Not Working)</a>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="ThisIsland" role="tabpanel" aria-labelledby="ThisIsland-tab">
+
+
+
+
+
+            <div class="row">
+                <div class="col-5">
+                
+            <table class="table table-striped table-dark table-hover" id="ThisIslandTable">
+                <thead>
+                  <tr>
+                    <th scope="col">Level</th>
+                    <th scope="col">Sex</th>
+                    <th scope="col">Health</th>
+                    <th scope="col">Stamina</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Melee</th>
+                    <th scope="col">Speed</th>
+
+                  </tr> 
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+
+            </div>
+            <div class="col-7">
+            
+            <img id="TheIslandImg" width="0" height="0" src="https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/0/04/The_Island_Topographic_Map.jpg" alt="The Scream">
+
+            <canvas id="TheIslandCanvas" width="1024" height="1024" style="border:5px solid #000000;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </div> </div>
+
+
+
+
+        </div>
+        <div class="tab-pane fade" id="RagnarokMap" role="tabpanel" aria-labelledby="RagnarokMap-tab">
+
+
+
+
+
+            <div class="row">
+                <div class="col-4">
+                
+            <table class="table table-striped table-dark table-hover" id="RagnarokTable">
+                <thead>
+                  <tr>
+                    <th scope="col">Level</th>
+                    <th scope="col">Sex</th>
+                    <th scope="col">Health</th>
+                    <th scope="col">Stamina</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Melee</th>
+                    <th scope="col">Speed</th>
+
+                  </tr> 
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+
+            </div>
+            <div class="col-8">
+                <img id="RagnarokImg" width="0" height="0" src="https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/c/cf/Ragnarok_Ocean_Topographic_Map.jpg" alt="The Scream">    
+
+            <canvas id="RagnarokCanvas" width="1024" height="1024" style="border:5px solid #000000;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </div> </div>
+
+
+
+        </div>
+
+
+        <div class="tab-pane fade" id="TheCenterMap" role="tabpanel" aria-labelledby="TheCenterMap-tab">
+
+
+            <div class="row">
+                <div class="col-4">
+                
+            <table class="table table-striped table-dark table-hover" id="TheCenterTable">
+                <thead>
+                  <tr>
+                    <th scope="col">Level</th>
+                    <th scope="col">Sex</th>
+                    <th scope="col">Health</th>
+                    <th scope="col">Stamina</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Melee</th>
+                    <th scope="col">Speed</th>
+
+                  </tr> 
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+
+            </div>
+            <div class="col-8">
+                <img id="TheCenterImg" width="0" height="0" src="https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/5/58/The_Center_Topographic_Map.jpg" alt="The Scream">    
+
+            <canvas id="TheCenterCanvas" width="1024" height="1024" style="border:5px solid #000000;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </div> </div>
+
+
+        </div>
+
+
+
+        <div class="tab-pane fade" id="GenesisMap" role="tabpanel" aria-labelledby="GenesisMap-tab">
+
+
+            <div class="row">
+                <div class="col-4">
+                
+            <table class="table table-striped table-dark table-hover" id="GenesisTable">
+                <thead>
+                  <tr>
+                    <th scope="col">Level</th>
+                    <th scope="col">Sex</th>
+                    <th scope="col">Health</th>
+                    <th scope="col">Stamina</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Melee</th>
+                    <th scope="col">Speed</th>
+
+                  </tr> 
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+
+            </div>
+            <div class="col-8">
+                <img id="GenesisImg" width="0" height="0" src="https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/e/e4/Genesis_Map.jpg" alt="The Scream">    
+
+            <canvas id="GenesisCanvas" width="1024" height="1024" style="border:5px solid #000000;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </div> </div>
+
+
+        </div>
+
+
+
+        <div class="tab-pane fade" id="Scorched_EarthMap" role="tabpanel" aria-labelledby="Scorched_EarthMap-tab">
+
+
+            <div class="row">
+                <div class="col-4">
+                
+            <table class="table table-striped table-dark table-hover" id="Scorched_EarthTable">
+                <thead>
+                  <tr>
+                    <th scope="col">Level</th>
+                    <th scope="col">Sex</th>
+                    <th scope="col">Health</th>
+                    <th scope="col">Stamina</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Melee</th>
+                    <th scope="col">Speed</th>
+
+                  </tr> 
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+
+            </div>
+            <div class="col-8">
+                <img id="Scorched_EarthImg" width="0" height="0" src="https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/8/83/Scorched_Earth_Map.png" alt="The Scream">    
+
+            <canvas id="Scorched_EarthCanvas" width="1024" height="1024" style="border:5px solid #000000;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </div> </div>
+
+
+        </div>
+
+
+
+
+        <div class="tab-pane fade" id="ExtinctionMap" role="tabpanel" aria-labelledby="ExtinctionMap-tab">
+
+
+            <div class="row">
+                <div class="col-4">
+                
+            <table class="table table-striped table-dark table-hover" id="ExtinctionTable">
+                <thead>
+                  <tr>
+                    <th scope="col">Level</th>
+                    <th scope="col">Sex</th>
+                    <th scope="col">Health</th>
+                    <th scope="col">Stamina</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Melee</th>
+                    <th scope="col">Speed</th>
+
+                  </tr> 
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+
+            </div>
+            <div class="col-8">
+                <img id="ExtinctionImg" width="0" height="0" src="https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/f/ff/Extinction_Map.jpg" alt="The Scream">    
+
+            <canvas id="ExtinctionCanvas" width="1024" height="1024" style="border:5px solid #000000;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </div> </div>
+
+
+        </div>
+
+
+
+        <div class="tab-pane fade" id="ValgueroMap" role="tabpanel" aria-labelledby="ValgueroMap-tab">
+
+
+            <div class="row">
+                <div class="col-4">
+                
+            <table class="table table-striped table-dark table-hover" id="ValgueroTable">
+                <thead>
+                  <tr>
+                    <th scope="col">Level</th>
+                    <th scope="col">Sex</th>
+                    <th scope="col">Health</th>
+                    <th scope="col">Stamina</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Melee</th>
+                    <th scope="col">Speed</th>
+
+                  </tr> 
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+
+            </div>
+            <div class="col-8">
+                <img id="ValgueroImg" width="0" height="0" src="https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/d/de/Valguero_Topographic_Map.jpg" alt="The Scream">    
+
+            <canvas id="ValgueroCanvas" width="1024" height="1024" style="border:5px solid #000000;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </div> </div>
+
+
+        </div>
+
+
+
+
+        
+      </div>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+
+
+    
+
+    <script>
+        var data = {0};
+        var ctx = 0;
+        window.onload = function () {
+            
+            var c = document.getElementById("TheIslandCanvas");
+            TheIslandCanvasCtx = c.getContext("2d");
+            TheIslandCanvasCtx.drawImage(document.getElementById("TheIslandImg"), 0, 0);
+
+            var c = document.getElementById("RagnarokCanvas");
+            RagnarokCanvasCtx = c.getContext("2d");
+            RagnarokCanvasCtx.drawImage(document.getElementById("RagnarokImg"), 0, 0);
+
+
+            var c = document.getElementById("GenesisCanvas");
+            GenesisCanvasCtx = c.getContext("2d");
+            GenesisCanvasCtx.drawImage(document.getElementById("GenesisImg"), 0, 0,1024,1024);
+
+            var c = document.getElementById("TheCenterCanvas");
+            TheCenterCanvasCtx = c.getContext("2d");
+            TheCenterCanvasCtx.drawImage(document.getElementById("TheCenterImg"), 0, 0,1024,1024);
+
+            var c = document.getElementById("Scorched_EarthCanvas");
+            Scorched_EarthCanvasCtx = c.getContext("2d");
+            Scorched_EarthCanvasCtx.drawImage(document.getElementById("Scorched_EarthImg"), 0, 0,1024,1024);
+
+
+            var c = document.getElementById("ExtinctionCanvas");
+            ExtinctionCanvasCtx = c.getContext("2d");
+            ExtinctionCanvasCtx.drawImage(document.getElementById("ExtinctionImg"), 0, 0,1024,1024);
+
+            var c = document.getElementById("ValgueroCanvas");
+            ValgueroCanvasCtx = c.getContext("2d");
+            ValgueroCanvasCtx.drawImage(document.getElementById("ValgueroImg"), 0, 0,1024,1024);
+
+            
+
+            
+var MapNotFound = {};
+            data.forEach(element => {
+
+
+                if (element.Location.MapName == "TheIsland") {
+                    if(element.BaseStats == undefined)
+                    {
+                        if(element.EggBaseStats != undefined)
+                        {
+                            var BaseLevel = element.EggBaseStats[0]+element.EggBaseStats[1]+element.EggBaseStats[2]+element.EggBaseStats[3]+element.EggBaseStats[4]+element.EggBaseStats[5]+element.EggBaseStats[6]+element.EggBaseStats[7]+element.EggBaseStats[8]+element.EggBaseStats[9]+element.EggBaseStats[10]+element.EggBaseStats[11];
+                            $('#ThisIslandTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+BaseLevel+"</th>  <td>"+element.CustomName+"</td> <td>"+Converter(element.EggBaseStats[0])+"</td> <td>"+Converter(element.EggBaseStats[1])+"</td> <td>"+Converter(element.EggBaseStats[7])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> </tr>");
+                        }
+                        else
+                            $('#ThisIslandTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>");
+
+                    }
+                    else
+                        $('#ThisIslandTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td>"+Converter(element.BaseStats[0])+"</td> <td>"+Converter(element.BaseStats[1])+"</td> <td>"+Converter(element.BaseStats[7])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> </tr>");
+                    TheIslandCanvasCtx.beginPath();
+                    TheIslandCanvasCtx.strokeStyle = "#ffa202";
+                    TheIslandCanvasCtx.lineWidth = 5;
+                    TheIslandCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                    TheIslandCanvasCtx.stroke();
+                }
+                else if(element.Location.MapName == "Ragnarok")
+                {
+                    if(element.BaseStats == undefined)
+                    {
+                        if(element.EggBaseStats != undefined)
+                        {
+                            var BaseLevel = element.EggBaseStats[0]+element.EggBaseStats[1]+element.EggBaseStats[2]+element.EggBaseStats[3]+element.EggBaseStats[4]+element.EggBaseStats[5]+element.EggBaseStats[6]+element.EggBaseStats[7]+element.EggBaseStats[8]+element.EggBaseStats[9]+element.EggBaseStats[10]+element.EggBaseStats[11];
+                            $('#RagnarokTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+BaseLevel+"</th>  <td>"+element.CustomName+"</td> <td>"+Converter(element.EggBaseStats[0])+"</td> <td>"+Converter(element.EggBaseStats[1])+"</td> <td>"+Converter(element.EggBaseStats[7])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> </tr>");
+                        }
+                        else
+                        $('#RagnarokTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td>?</td> <td>?</td> <td>?</td> <td></td> <td>?</td> </tr>");
+                    }
+                    else
+                    $('#RagnarokTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td>"+Converter(element.BaseStats[0])+"</td> <td>"+Converter(element.BaseStats[1])+"</td> <td>"+Converter(element.BaseStats[7])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> </tr>");
+                    RagnarokCanvasCtx.beginPath();
+                    RagnarokCanvasCtx.strokeStyle = "#ffa202";
+                    RagnarokCanvasCtx.lineWidth = 5;
+                    RagnarokCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                    RagnarokCanvasCtx.stroke();
+                }
+                else if(element.Location.MapName == "Genesis")
+                {
+                    if(element.BaseStats == undefined)
+                    {
+                        if(element.EggBaseStats != undefined)
+                        {
+                            var BaseLevel = element.EggBaseStats[0]+element.EggBaseStats[1]+element.EggBaseStats[2]+element.EggBaseStats[3]+element.EggBaseStats[4]+element.EggBaseStats[5]+element.EggBaseStats[6]+element.EggBaseStats[7]+element.EggBaseStats[8]+element.EggBaseStats[9]+element.EggBaseStats[10]+element.EggBaseStats[11];
+                            $('#GenesisTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+BaseLevel+"</th>  <td>"+element.CustomName+"</td> <td>"+Converter(element.EggBaseStats[0])+"</td> <td>"+Converter(element.EggBaseStats[1])+"</td> <td>"+Converter(element.EggBaseStats[7])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> </tr>");
+                        }
+                        else
+                        $('#GenesisTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td>?</td> <td>?</td> <td>?</td> <td></td> <td>?</td> </tr>");
+                    }
+                    else
+                    $('#GenesisTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td>"+Converter(element.BaseStats[0])+"</td> <td>"+Converter(element.BaseStats[1])+"</td> <td>"+Converter(element.BaseStats[7])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> </tr>");
+                    GenesisCanvasCtx.beginPath();
+                    GenesisCanvasCtx.strokeStyle = "#ffa202";
+                    GenesisCanvasCtx.lineWidth = 5;
+                    GenesisCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                    GenesisCanvasCtx.stroke();
+                }
+                else if(element.Location.MapName == "TheCenter")
+                {
+                    if(element.BaseStats == undefined)
+                    {
+                        if(element.EggBaseStats != undefined)
+                        {
+                            var BaseLevel = element.EggBaseStats[0]+element.EggBaseStats[1]+element.EggBaseStats[2]+element.EggBaseStats[3]+element.EggBaseStats[4]+element.EggBaseStats[5]+element.EggBaseStats[6]+element.EggBaseStats[7]+element.EggBaseStats[8]+element.EggBaseStats[9]+element.EggBaseStats[10]+element.EggBaseStats[11];
+                            $('#TheCenterTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+BaseLevel+"</th>  <td>"+element.CustomName+"</td> <td>"+Converter(element.EggBaseStats[0])+"</td> <td>"+Converter(element.EggBaseStats[1])+"</td> <td>"+Converter(element.EggBaseStats[7])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> </tr>");
+
+                        }
+                        else
+                        $('#TheCenterTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td>?</td> <td>?</td> <td>?</td> <td></td> <td>?</td> </tr>");
+                    }
+                    else
+                    $('#TheCenterTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td>"+Converter(element.BaseStats[0])+"</td> <td>"+Converter(element.BaseStats[1])+"</td> <td>"+Converter(element.BaseStats[7])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> </tr>");
+                    TheCenterCanvasCtx.beginPath();
+                    TheCenterCanvasCtx.strokeStyle = "#ffa202";
+                    TheCenterCanvasCtx.lineWidth = 5;
+                    TheCenterCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                    TheCenterCanvasCtx.stroke();
+                }
+                else if(element.Location.MapName == "ScorchedEarth_P")
+                {
+                    if(element.BaseStats == undefined)
+                    {
+                        if(element.EggBaseStats != undefined)
+                        {
+                            var BaseLevel = element.EggBaseStats[0]+element.EggBaseStats[1]+element.EggBaseStats[2]+element.EggBaseStats[3]+element.EggBaseStats[4]+element.EggBaseStats[5]+element.EggBaseStats[6]+element.EggBaseStats[7]+element.EggBaseStats[8]+element.EggBaseStats[9]+element.EggBaseStats[10]+element.EggBaseStats[11];
+                            $('#Scorched_EarthTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+BaseLevel+"</th>  <td>"+element.CustomName+"</td> <td>"+Converter(element.EggBaseStats[0])+"</td> <td>"+Converter(element.EggBaseStats[1])+"</td> <td>"+Converter(element.EggBaseStats[7])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> </tr>");
+                        }
+                        else
+                        $('#Scorched_EarthTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td>?</td> <td>?</td> <td>?</td> <td></td> <td>?</td> </tr>");
+                    }
+                    else
+                    $('#Scorched_EarthTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td>"+Converter(element.BaseStats[0])+"</td> <td>"+Converter(element.BaseStats[1])+"</td> <td>"+Converter(element.BaseStats[7])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> </tr>");
+                    Scorched_EarthCanvasCtx.beginPath();
+                    Scorched_EarthCanvasCtx.strokeStyle = "#ffa202";
+                    Scorched_EarthCanvasCtx.lineWidth = 5;
+                    Scorched_EarthCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                    Scorched_EarthCanvasCtx.stroke();
+                }
+                else if(element.Location.MapName == "Extinction")
+                {
+                    if(element.BaseStats == undefined)
+                    {
+                        if(element.EggBaseStats != undefined)
+                        {
+                            var BaseLevel = element.EggBaseStats[0]+element.EggBaseStats[1]+element.EggBaseStats[2]+element.EggBaseStats[3]+element.EggBaseStats[4]+element.EggBaseStats[5]+element.EggBaseStats[6]+element.EggBaseStats[7]+element.EggBaseStats[8]+element.EggBaseStats[9]+element.EggBaseStats[10]+element.EggBaseStats[11];
+                            $('#ExtinctionTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+BaseLevel+"</th>  <td>"+element.CustomName+"</td> <td>"+Converter(element.EggBaseStats[0])+"</td> <td>"+Converter(element.EggBaseStats[1])+"</td> <td>"+Converter(element.EggBaseStats[7])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> </tr>");
+                        }
+                        else
+                        $('#ExtinctionTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td>?</td> <td>?</td> <td>?</td> <td></td> <td>?</td> </tr>");
+                    }
+                    else
+                    $('#ExtinctionTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td>"+Converter(element.BaseStats[0])+"</td> <td>"+Converter(element.BaseStats[1])+"</td> <td>"+Converter(element.BaseStats[7])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> </tr>");
+                    ExtinctionCanvasCtx.beginPath();
+                    ExtinctionCanvasCtx.strokeStyle = "#ffa202";
+                    ExtinctionCanvasCtx.lineWidth = 5;
+                    ExtinctionCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                    ExtinctionCanvasCtx.stroke();
+                }
+                else if(element.Location.MapName == "Valguero_P")
+                {
+                    if(element.BaseStats == undefined)
+                    {
+                        if(element.EggBaseStats != undefined)
+                        {
+                            var BaseLevel = element.EggBaseStats[0]+element.EggBaseStats[1]+element.EggBaseStats[2]+element.EggBaseStats[3]+element.EggBaseStats[4]+element.EggBaseStats[5]+element.EggBaseStats[6]+element.EggBaseStats[7]+element.EggBaseStats[8]+element.EggBaseStats[9]+element.EggBaseStats[10]+element.EggBaseStats[11];
+                            $('#ValgueroTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+BaseLevel+"</th>  <td>"+element.CustomName+"</td> <td>"+Converter(element.EggBaseStats[0])+"</td> <td>"+Converter(element.EggBaseStats[1])+"</td> <td>"+Converter(element.EggBaseStats[7])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> <td>"+Converter(element.EggBaseStats[8])+"</td> </tr>");
+                        }
+                        else
+                        $('#ValgueroTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td></td> <td>?</td> <td>?</td> <td></td> <td>?</td> </tr>");
+                    }
+                    else
+                    $('#ValgueroTable tbody').append("<tr DinoID=\""+element.Id+"\"> <th scope=\"row\">"+element.BaseLevel+"</th>  <td>"+element.Gender+"</td> <td>"+Converter(element.BaseStats[0])+"</td> <td>"+Converter(element.BaseStats[1])+"</td> <td>"+Converter(element.BaseStats[7])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> <td>"+Converter(element.BaseStats[8])+"</td> </tr>");
+                    ValgueroCanvasCtx.beginPath();
+                    ValgueroCanvasCtx.strokeStyle = "#ffa202";
+                    ValgueroCanvasCtx.lineWidth = 5;
+                    ValgueroCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                    ValgueroCanvasCtx.stroke();
+                }
+
+
+                
+                else{
+                    MapNotFound[element.Location.MapName] = 1;
+                }
+                
+
+
+            });
+            for (let [key, value] of Object.entries(MapNotFound)) {
+                console.log(`${key}: ${value}`);
+            }
+
+            $( "#ThisIslandTable tbody tr" ).hover(
+                function() {
+                    var Id = $(this).attr("DinoID");
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            TheIslandCanvasCtx.beginPath();
+                            TheIslandCanvasCtx.strokeStyle = "#FF0000";
+                            TheIslandCanvasCtx.lineWidth = 5;
+                            TheIslandCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            TheIslandCanvasCtx.stroke();
+                        }
+                    });
+                }, 
+                function() {
+                    var Id = $(this).attr("DinoID");
+
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            TheIslandCanvasCtx.beginPath();
+                            TheIslandCanvasCtx.strokeStyle = "#ffa202";
+                            TheIslandCanvasCtx.lineWidth = 5;
+                            TheIslandCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            TheIslandCanvasCtx.stroke();
+                        }
+                    });
+                }
+            );
+            $( "#RagnarokTable tbody tr" ).hover(
+                function() {
+                    var Id = $(this).attr("DinoID");
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            RagnarokCanvasCtx.beginPath();
+                            RagnarokCanvasCtx.strokeStyle = "#FF0000";
+                            RagnarokCanvasCtx.lineWidth = 5;
+                            RagnarokCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            RagnarokCanvasCtx.stroke();
+                        }
+                    });
+                }, 
+                function() {
+                    var Id = $(this).attr("DinoID");
+
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            RagnarokCanvasCtx.beginPath();
+                            RagnarokCanvasCtx.strokeStyle = "#ffa202";
+                            RagnarokCanvasCtx.lineWidth = 5;
+                            RagnarokCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            RagnarokCanvasCtx.stroke();
+                        }
+                    });
+                }
+            );
+
+            $( "#GenesisTable tbody tr" ).hover(
+                function() {
+                    var Id = $(this).attr("DinoID");
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            GenesisCanvasCtx.beginPath();
+                            GenesisCanvasCtx.strokeStyle = "#FF0000";
+                            GenesisCanvasCtx.lineWidth = 5;
+                            GenesisCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            GenesisCanvasCtx.stroke();
+                        }
+                    });
+                }, 
+                function() {
+                    var Id = $(this).attr("DinoID");
+
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            GenesisCanvasCtx.beginPath();
+                            GenesisCanvasCtx.strokeStyle = "#ffa202";
+                            GenesisCanvasCtx.lineWidth = 5;
+                            GenesisCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            GenesisCanvasCtx.stroke();
+                        }
+                    });
+                }
+            );
+
+
+            $( "#TheCenterTable tbody tr" ).hover(
+                function() {
+                    var Id = $(this).attr("DinoID");
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            TheCenterCanvasCtx.beginPath();
+                            TheCenterCanvasCtx.strokeStyle = "#FF0000";
+                            TheCenterCanvasCtx.lineWidth = 5;
+                            TheCenterCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            TheCenterCanvasCtx.stroke();
+                        }
+                    });
+                }, 
+                function() {
+                    var Id = $(this).attr("DinoID");
+
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            TheCenterCanvasCtx.beginPath();
+                            TheCenterCanvasCtx.strokeStyle = "#ffa202";
+                            TheCenterCanvasCtx.lineWidth = 5;
+                            TheCenterCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            TheCenterCanvasCtx.stroke();
+                        }
+                    });
+                }
+            );
+
+
+            $( "#Scorched_EarthTable tbody tr" ).hover(
+                function() {
+                    var Id = $(this).attr("DinoID");
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            Scorched_EarthCanvasCtx.beginPath();
+                            Scorched_EarthCanvasCtx.strokeStyle = "#FF0000";
+                            Scorched_EarthCanvasCtx.lineWidth = 5;
+                            Scorched_EarthCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            Scorched_EarthCanvasCtx.stroke();
+                        }
+                    });
+                }, 
+                function() {
+                    var Id = $(this).attr("DinoID");
+
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            Scorched_EarthCanvasCtx.beginPath();
+                            Scorched_EarthCanvasCtx.strokeStyle = "#ffa202";
+                            Scorched_EarthCanvasCtx.lineWidth = 5;
+                            Scorched_EarthCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            Scorched_EarthCanvasCtx.stroke();
+                        }
+                    });
+                }
+            );
+
+
+
+            $( "#ExtinctionTable tbody tr" ).hover(
+                function() {
+                    var Id = $(this).attr("DinoID");
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            ExtinctionCanvasCtx.beginPath();
+                            ExtinctionCanvasCtx.strokeStyle = "#FF0000";
+                            ExtinctionCanvasCtx.lineWidth = 5;
+                            ExtinctionCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            ExtinctionCanvasCtx.stroke();
+                        }
+                    });
+                }, 
+                function() {
+                    var Id = $(this).attr("DinoID");
+
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            ExtinctionCanvasCtx.beginPath();
+                            ExtinctionCanvasCtx.strokeStyle = "#ffa202";
+                            ExtinctionCanvasCtx.lineWidth = 5;
+                            ExtinctionCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            ExtinctionCanvasCtx.stroke();
+                        }
+                    });
+                }
+            );
+
+            $( "#ValgueroTable tbody tr" ).hover(
+                function() {
+                    var Id = $(this).attr("DinoID");
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            ValgueroCanvasCtx.beginPath();
+                            ValgueroCanvasCtx.strokeStyle = "#FF0000";
+                            ValgueroCanvasCtx.lineWidth = 5;
+                            ValgueroCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            ValgueroCanvasCtx.stroke();
+                        }
+                    });
+                }, 
+                function() {
+                    var Id = $(this).attr("DinoID");
+
+                    data.forEach(element => {
+                        if (element.Id == Id)
+                        {
+                            ValgueroCanvasCtx.beginPath();
+                            ValgueroCanvasCtx.strokeStyle = "#ffa202";
+                            ValgueroCanvasCtx.lineWidth = 5;
+                            ValgueroCanvasCtx.arc(element.Location.TopoMapX, element.Location.TopoMapY, 5, 0, 2 * Math.PI);
+                            ValgueroCanvasCtx.stroke();
+                        }
+                    });
+                }
+            );
+
+
+            
+
+
+            $('#ThisIslandTable').DataTable({
+                "order": [[ 0, "desc" ]],
+                "searching": false, // false to disable search (or any other option)
+                "paging": true
+                });
+                $('#RagnarokTable').DataTable({
+                "order": [[ 0, "desc" ]],
+                "searching": false, // false to disable search (or any other option)
+                "paging": true
+                });
+                $('#GenesisTable').DataTable({
+                "order": [[ 0, "desc" ]],
+                "searching": false, // false to disable search (or any other option)
+                "paging": true
+                });
+
+                $('#TheCenterTable').DataTable({
+                "order": [[ 0, "desc" ]],
+                "searching": false, // false to disable search (or any other option)
+                "paging": true
+                });
+                $('#Scorched_EarthTable').DataTable({
+                "order": [[ 0, "desc" ]],
+                "searching": false, // false to disable search (or any other option)
+                "paging": true
+                });
+                $('#ExtinctionTable').DataTable({
+                "order": [[ 0, "desc" ]],
+                "searching": false, // false to disable search (or any other option)
+                "paging": true
+                });
+                $('#ValgueroTable').DataTable({
+                "order": [[ 0, "desc" ]],
+                "searching": false, // false to disable search (or any other option)
+                "paging": true
+                });
+        }
+
+        
+
+        names = {"Rex_Character_BP_C":"Rex"}
+
+        function Converter(s) {
+            if (names[s] != undefined) {
+                return names[s];
+            }
+            return s;
+        }
+    </script>
+
+</body>
+</html>
