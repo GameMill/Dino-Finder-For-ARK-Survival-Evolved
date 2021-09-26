@@ -20,7 +20,7 @@ namespace Ark_Dino_Finder
         static Server Genesis;
 
         public static HttpListener listener;
-        public static string url = "http://192.168.0.13:5255/";
+        public static string url = "";
         public static int pageViews = 0;
         public static int requestCount = 0;
         public static string pageData =
@@ -40,9 +40,10 @@ namespace Ark_Dino_Finder
 
         static void Main(string[] args)
         {
+            url = "http://" + Settings.Instance.IpAddress + "/";
 
             //prepare
-            var cd = new ArkSavegameToolkitNet.Domain.ArkClusterData(@"D:\servers\ark\Servers\Server1\ShooterGame\Saved\CommomSave\clusters\server", loadOnlyPropertiesInDomain: true);
+            var cd = new ArkSavegameToolkitNet.Domain.ArkClusterData(Settings.Instance.ArkClusterDataDirectory, loadOnlyPropertiesInDomain: true);
 
             cd.Update(System.Threading.CancellationToken.None);
             Aberration_P = new Server("Aberration_P", cd);
@@ -246,7 +247,7 @@ namespace Ark_Dino_Finder
             {
 
                 this.clusterData = clusterData;
-                FilePath = @"D:\servers\ark\Servers\"+ FileName + @"\ShooterGame\Saved\"+FileName+@"Save\" + FileName+".ark";
+                FilePath = Settings.Instance.ArkServerRoot + FileName + @"\ShooterGame\Saved\"+FileName+@"Save\" + FileName+".ark";
                 gd = new ArkSavegameToolkitNet.Domain.ArkGameData(FilePath, this.clusterData, loadOnlyPropertiesInDomain: true);
                 gd.Update(System.Threading.CancellationToken.None, deferApplyNewData: false);
                 Console.WriteLine(gd.SaveState.MapName + " | Dino Count: {0} | Item Count: {1}", gd.WildCreatures.Length,gd.Items.Length);

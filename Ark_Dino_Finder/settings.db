@@ -1,0 +1,6 @@
+﻿{
+	"IpAddress":"192.168.0.1",
+	"Port":5500,
+	"ArkClusterDataDirectory":"D:\servers\ark\Servers\Server1\ShooterGame\Saved\CommomSave\clusters\server",
+	"ArkServerRoot":"c:\\Servers\\"
+}
